@@ -54,6 +54,49 @@
               <h3>Transactions</h3>
             </div>
           </div>
+          <section>
+            <div class="">
+              <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                  <div class="card-body">
+                    <legend>Add Money</legend>
+                    <select class="select">
+                      <option disabled selected>Select Bank</option>
+                      <option value="Bkash">Bkash</option>
+                      <option value="Nagad">Nagad</option>
+                      <option value="Rocket">Rocket</option>
+                      <option value="dbbl">DBBL</option>
+                    </select>
+                    <fieldset class="fieldset">
+                      <label class="fieldset-label">Account Number</label>
+                      <input
+                        id="Account-Number"
+                        type="number"
+                        class="input"
+                        placeholder="Ac Number"
+                        required
+                      />
+                      <label class="fieldset-label">PIN</label>
+                      <input
+                        id="pin"
+                        type="text"
+                        class="input"
+                        placeholder="Enter PIN"
+                        required
+                      />
+                      <div><a class="link link-hover">Forgot password?</a></div>
+                      <button
+                        id="btn-login"
+                        class="btn btn-neutral border-none bg-blue-700 mt-4"
+                      >
+                        Add Money
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </section>
       </header>
     </section>
