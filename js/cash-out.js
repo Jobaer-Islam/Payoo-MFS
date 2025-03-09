@@ -5,7 +5,13 @@ document.getElementById("cash-out-btn").addEventListener("click",
 
         const amount = getInputValueById("cashout-amount");
         const pin = getInputValueById("cashout-pin");
-        const mainBalance = getInnerTextById("main-balance")
+        const mainBalance = getInnerTextById("main-balance");
+        const selectedBank = document.getElementById("allbank").value;
+
+        if (amount > mainBalance) {
+            alert("invalid amount")
+            return;
+        }
 
         if (account.length === 11) {
             if (pin === 1234) {
@@ -16,7 +22,7 @@ document.getElementById("cash-out-btn").addEventListener("click",
                 const container = document.getElementById("transaction-container");
                 const p = document.createElement("p");
                 const now = new Date();
-                p.innerText = ` cashout ${amount} from account ${account} ${now}`
+                p.innerText = `${selectedBank} cashout ${amount} from account ${account} ${now}`
                 container.appendChild(p)
             }
             else {

@@ -1,4 +1,6 @@
 document.getElementById("cash-out").style.display = "none"
+document.getElementById("transantion-history").style.display = "none"
+
 
 document.getElementById("add-money-card").addEventListener
     ("click", function () {
