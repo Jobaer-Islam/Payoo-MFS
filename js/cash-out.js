@@ -12,6 +12,12 @@ document.getElementById("cash-out-btn").addEventListener("click",
                 const sum = mainBalance - amount;
                 // document.getElementById("main-balance").innerText = sum;
                 setInnerTextByIDandValue("main-balance", sum);
+
+                const container = document.getElementById("transaction-container");
+                const p = document.createElement("p");
+                const now = new Date();
+                p.innerText = ` cashout ${amount} from account ${account} ${now}`
+                container.appendChild(p)
             }
             else {
                 console.log("pin thik nai")
